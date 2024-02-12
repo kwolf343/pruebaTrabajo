@@ -1,0 +1,20 @@
+h1{
+    margin: 20px 0;
+}
+a{
+    text-decoration: none;
+}
+.dividir{
+    width: 100%;
+}
+.dividir div{
+    width: 50%;
+    float: left;
+}
+p{
+    margin-bottom: 5px;
+}
+i{
+    color: green;
+    font-size: 20px;
+}

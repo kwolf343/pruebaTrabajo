@@ -1,0 +1,35 @@
+form{
+    margin-top: 70px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+button{
+    width: 100%;
+    margin: 10px 0px;
+    background-color: transparent;
+    font-weight: semibold;
+    color:#444;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border:2px solid #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: inset .2rem .2rem 1rem #fff,
+    inset -.2rem -.2rem 1rem #ccc
+}
+button:active{
+    box-shadow: inset .2rem .2rem 1rem #ccc,
+    inset -.2rem -.2rem 1rem #ccc
+}
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+  }
+a{
+    text-decoration: none;
+}

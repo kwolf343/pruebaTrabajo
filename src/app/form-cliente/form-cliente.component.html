@@ -1,0 +1,37 @@
+<form #miFormulario="ngForm" (ngSubmit)="guardar(miFormulario)" (keydown.enter)="$event.preventDefault()">
+    <div class="container form-group col-md-6 pintar">
+        <h2>{{accion}} Cliente</h2>
+        <div>
+            <label for="nombre">Nombres: <p class="alerta">{{errorNombre}}</p></label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" required [(ngModel)]="nombre">
+
+            <label for="apellido">Apellidos: <p class="alerta">{{errorApellido}}</p></label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" required [(ngModel)]="apellido">
+
+            <label for="telefono">Telefono: <p class="alerta">{{errorTelefono}}</p></label>
+            <input type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control" required [(ngModel)]="telefono" (keydown)="validarTeclaNumerica($event)">
+            
+            <label for="direccion">Dirección: <p class="alerta">{{errorDirecciones}}</p></label>
+            <div class="agrega">
+                <input type="text" name="direccion" id="direccion" placeholder="Direccion" class="form-control" (keydown.enter)="agregarDireccion()"[(ngModel)]="direccion">
+                <button type="button" class="btnAll" (click)="agregarDireccion()">Agregar</button>
+            </div>
+            <label for="identificacion">Numero de identificación: <p class="alerta">{{errorIdentificaciones}}</p></label>
+            <div class="agrega">
+                <input type="text" name="identificacion" id="identificacion" placeholder="Identificación" class="form-control" (keydown.enter)="agregarIdentificacion()" [(ngModel)]="identificacion">
+                <button type="button" class="btnAll" (click)="agregarIdentificacion()">Agregar</button>
+            </div>
+            <div class="separar">
+                <p>{{listDireccion.length}} direcciones</p>
+                <p>{{listIdentificacion.length}} Identificaciones</p>
+                <p (click)="modificar()" class="cursor">Editar</p>
+            </div>
+        </div>
+        <div class="flex separar">
+            <button type="submit">Guardar</button>
+            <button type="button" (click)="cancelar()">Cancelar</button>
+        </div>
+    </div>
+</form>
+    
+    

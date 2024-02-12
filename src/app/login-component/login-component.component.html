@@ -1,0 +1,19 @@
+<form #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+    <div class="container form-group col-md-3">
+        <br><br>
+        <h1>Login</h1>
+        <div class="">
+            <br><input type="email" name="email" placeholder="Email" class="form-control" ngModel>
+        </div>
+        <div>
+            <br><input type="password" name="password" placeholder="Password" class="form-control" ngModel>
+        </div>
+        <div class="centrar">
+            <br><br><button type="submit">Iniciar sesión</button>
+        </div>
+        <div>
+            ¿no tienes una cuenta? <a href="/registro">registrarse</a>
+        </div>
+    </div>
+</form>
+

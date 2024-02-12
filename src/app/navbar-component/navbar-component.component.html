@@ -1,0 +1,23 @@
+<header [ngClass]="{'pad': pad}">
+    <nav [ngClass]="{'nav': mostrar}">
+        <button class="cerrarMenu" (click)="cerrar()"><i class="bi bi-x-lg cerrar"></i></button>
+        <div>
+            <ul class="nav-list">
+                <li><a href="">Inicio</a></li>
+                <li><a href="clientes">Mis clientes</a></li>
+                <li><a href="historico">Historico clientes</a></li>
+                <ng-container *ngIf="!mostrar">
+                    <li *ngIf="!estaLogueado()"><a href="login">Login</a></li>
+                    <li *ngIf="estaLogueado()"><a (click)="logout()" class="a">Logout</a></li>
+                </ng-container>
+            </ul>
+            <ng-container *ngIf="mostrar">
+                <ul class="nav-list inferior">
+                    <li *ngIf="!estaLogueado()"><a routerLink="/login">Login</a></li>
+                    <li *ngIf="estaLogueado()"><a (click)="logout()" class="a">Logout</a></li>
+                </ul>
+            </ng-container>
+        </div>
+    </nav>
+    <button class="abrirMenu" (click)="abrir()"><i class="bi bi-list"></i></button>
+</header>

@@ -1,0 +1,18 @@
+<form #miFormulario="ngForm" (ngSubmit)="registrar(miFormulario)">
+    <div class="container form-group col-md-3">
+        <h1>Registro</h1>
+        <div class="">
+            <br><input type="email" name="email" placeholder="Email" class="form-control" ngModel>
+        </div>
+        <div>
+            <br><input type="password" name="password" placeholder="Password" class="form-control" ngModel>
+        </div>
+        <div>
+            {{error}}
+        </div>
+        <div class="centrar">
+            <br><br><button type="submit">Registrarme</button>
+        </div>
+    </div>
+</form>
+

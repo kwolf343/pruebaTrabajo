@@ -1,0 +1,41 @@
+<div class="contenedor-total">
+    <div class="container form-group col-md-7 pintar p">
+        <div class="boton-cerrar"><i class="bi bi-x-lg" (click)="regresar()"></i></div>
+        <h2>Cliente</h2>
+        <div class="flex1">
+            <div>
+                <img src="assets/user.png" class="fotoPerfil">
+            </div>
+            <div class="derecha">
+                <p><strong>Codigo: </strong>{{cliente.id}}</p>
+                <p><strong>Nombres: </strong>{{cliente.nombres}}</p>
+                <p><strong>Apellidos: </strong>{{cliente.apellidos}}</p>
+                <p><strong>Telefono: </strong>{{cliente.telefono}}</p>
+                <p><strong>Gestion por: </strong>{{cliente.user}}</p>
+                <p><strong>Fecha: </strong>{{cliente.fecha}}</p>
+                <p><strong>Hora: </strong>{{cliente.hora}}</p>
+                <p><strong>Accion: </strong>{{cliente.accion}}</p>
+            </div>
+        </div>
+        <div class="flex2">
+            <div class="col-md-6">
+                <p>
+                    <strong>Direcciones:</strong>
+                </p>
+                <ol>
+                    <li *ngFor="let cliente of cliente.direcciones let i=index">{{cliente}}</li>
+                </ol>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <strong>Identificaciones:</strong>
+                </p>
+                <ol>
+                    <li *ngFor="let cliente of cliente.identificaciones let i=index">{{cliente}}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+    
+

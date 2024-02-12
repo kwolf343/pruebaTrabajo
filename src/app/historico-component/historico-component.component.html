@@ -1,0 +1,29 @@
+<div class="principal">
+  <div class="container bajar">
+    <button (click)="reporte()">Reporte</button>
+  </div>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Accion</th>  
+                <th scope="col">Gestion por</th> 
+                <th scope="col">Fecha</th>
+                <th scope="col">Ver</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cliente of clientes let i=index">
+                  <td>{{cliente.nombres}} </td>
+                  <td>{{cliente.accion}}</td>
+                  <td>{{quitarMail(cliente.user)}}</td>
+                  <td>{{cliente.fecha}}</td>
+                  <td>
+                      <a class="ver" (click)="ver(i)"><i class="bi bi-file-text-fill"></i></a>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>    
+</div>
